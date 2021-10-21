@@ -25,8 +25,6 @@ multiqc -o multiqc fastqc
 ```
 Для скачивания файлов с сервера использовал программу FileZilla
 
-![alt](./pictures/stat_1.png) | ![alt](./pictures/stat_2.png)
-
 4) Обрезаем чтение по качеству и убираем праймеры:
 ```
 platanus_trim pe_R1.fastq pe_R2.fastq 
@@ -49,6 +47,13 @@ ls trimmed_fastq/* | xargs -P 4 -tI{} fastqc -o trimmed_fastqc {}
 mkdir trimmed_multiqc
 multiqc -o trimmed_multiqc trimmed_fastqc
 ```
+До:
+![alt](./pictures/stat_1.png)
+После:
+![alt](./pictures/stat_2.png)
+
+
+
 6) Cобираем контиги из подрезанных чтений:
 ```
 time platanus assemble -o Poil -f trimmed_fastq/pe_R1.fastq.trimmed trimmed_fastq/pe_R2.fastq.trimmed 2> assemble.log
