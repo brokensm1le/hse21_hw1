@@ -25,7 +25,9 @@ multiqc -o multiqc fastqc
 ```
 Для скачивания файлов с сервера использовал программу FileZilla
 
-![title](./pictures/stat_1.png)
+A | B
+- | - 
+![alt](./pictures/stat_1.png) | ![alt](./pictures/stat_2.png)
 
 4) Обрезаем чтение по качеству и убираем праймеры:
 ```
