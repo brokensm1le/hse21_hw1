@@ -93,6 +93,8 @@ time platanus gap_close -o Poil -c Poil_scaffold.fa -IP1 trimmed_fastq/pe_R1.fas
 11) Анализ полученных скаффолдов с уменьшением гэпов:
 
 jupyter_notebook
+
+Создаем файл с одним самым большим размером:
 ```
 echo scaffold1_cov231 > name_scaff.txt
 seqtk subseq Poil_gapClosed.fa name_scaff.txt > longest.fna
