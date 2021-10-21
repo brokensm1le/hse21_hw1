@@ -52,6 +52,15 @@ multiqc -o trimmed_multiqc trimmed_fastqc
 После:
 ![alt](./pictures/stat_2.png)
 
+До:
+![alt](./pictures/mean_1.png)
+После:
+![alt](./pictures/mean_2.png)
+
+До:
+![alt](./pictures/adapter_1.png)
+После:
+![alt](./pictures/adapter_2.png)
 
 
 6) Cобираем контиги из подрезанных чтений:
