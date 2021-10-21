@@ -25,6 +25,8 @@ multiqc -o multiqc fastqc
 ```
 Для скачивания файлов с сервера использовал программу FileZilla
 
+![title](./pictures/stat_1.png)
+
 4) Обрезаем чтение по качеству и убираем праймеры:
 ```
 platanus_trim pe_R1.fastq pe_R2.fastq 
