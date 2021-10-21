@@ -38,7 +38,6 @@ ls -1 *.fastq | xargs -tI{} rm -r {}
 ```
 mkdir trimmed_fastq
 mv -v *trimmed trimmed_fastq/
-```
 mkdir trimmed_fastqc
 ls trimmed_fastq/* | xargs -P 4 -tI{} fastqc -o trimmed_fastqc {}
 ```
