@@ -8,12 +8,17 @@ mkdir 1
 cd 1
 ls -1 /usr/share/data-minor-bioinf/assembly/* | xargs -tI{} ln -s {}
 ```
-2) Делаем случайные чтения:
+2) Делаем случайные чтения и удаляем не нужные файлы:
 ```
 seqtk sample -s1025 oil_R1.fastq 5000000 > pe_R1.fastq
 seqtk sample -s1025 oil_R2.fastq 5000000 > pe_R2.fastq
 seqtk sample -s1025 oilMP_S4_L001_R1_001.fastq 1500000 > mp_R1.fastq
 seqtk sample -s1025 oilMP_S4_L001_R2_001.fastq 1500000 > mp_R2.fastq
+
+rm -r oil_R1.fastq
+rm -r oil_R2.fastq
+rm -r oilMP_S4_L001_R1_001.fastq
+rm -r oilMP_S4_L001_R2_001.fastq
 ```
 3) Оцениваем качество для наших чтений(fastQC и multiQC):
 ```
